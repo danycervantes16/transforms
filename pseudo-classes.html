@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./disable.js"></script>
+    <style>
+        a:link {
+            color: #c4b2bb;
+        }
+        a:visited {
+            color: auto;
+        }
+        a:hover {
+            background-color: lightblue;
+        }
+        p:not(.name) {
+            color: green;
+        }
+        .container div:nth-child(1) {
+            background-color: rgb(50, 206, 192);
+        }
+        input:focus {
+            background-color:blue;
+            color: white;
+        }
+        .action {
+            color: greenyellow;
+            background-color: black;
+        }
+        .action:active {
+            color: blue;
+            background-color: coral;
+        }
+        input[type="text"]:disabled {
+            color: grey;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Daniel</a>
+    <a href="/">Daniel</a>
+    <a href="/">Daniel</a>
+    <p class="name">Daniel</p>
+    <p>Cervantes</p>
+    <p>Martinez</p>
+    <div class="container">
+        <h5>Dany</h5>
+        <h5>Dany</h5>
+        <h5>Dany</h5>
+    </div>
+    <div>
+        <input type="text" placeholder="Ingresa tu nombre">
+    </div>
+    <p class="action">Este parrafo se activa</p>
+
+    <form id="test" action="/">
+        <label for="">Cancelar</label>
+        <input id="cuadrito" type="checkbox" onclick="activeCancel()">
+        <br>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </form>
+</body>
+</html>
