@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background: lightgoldenrodyellow;
+            width: 400px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            margin: 30px;
+            border: 2px solid darkslategrey;
+        }
+        .container:hover .box{
+            transform: scale(1.2);
+            transform: rotate(45deg);
+            transform: skew(20deg,20deg);
+            transform: translate(20px,20px);
+            transform: scale(1.2) rotate(45deg) skew(20deg,20deg) translate(20px,20px);
+            transform-origin: top right;
+        }
+        .container:hover .box > p {
+            display: block;
+        }
+        .box {
+            background: coral;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1 {
+            background: lightgreen;
+            transition: transform 1s;
+        }
+        .box2 {
+            background: lightseagreen;
+            transition: transform 1s;
+        }
+        .box3 {
+            background: lightcoral;
+            transition: transform 1s;
+        }
+        .box > p {
+            display: none;
+            font-size: 24px;
+            font-weight: bolder;
+        }
+        h1 {
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Quien es la mas chingona?</h1>      
+    </div>
+    <div class="container">
+        <div class="box box1"><p>J</p>
+        </div>
+        <div class="box box2"><p>O</p>
+        </div>
+        <div class="box box3"><p>A</p>
+        </div>
+    </div>
+</body>
+</html>
