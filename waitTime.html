@@ -5,13 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .nav {
+            display: flex; /* Change from vertical to horizontal */
+        }
+        .nav li ul { /* It takes products and sizes */
+            display: block;
+            visibility: hidden;
+            position: absolute; /* it doesn't hace space between main items */
+            transition: visibility 0.99s; /* time to disappear */
+            transition-delay: 0.01s; /* time to appear */
+        }
+        .nav ul li {
+            position: relative;
+            left: 70px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav li:hover > ul {
+            visibility: visible;
+            transition: visibility 0.01s; /* time to disappear once it's selected*/
+            transition-delay: 0.99s; /* time to appear */
+        }
+        .nav > li > a { /* This for main categories */
+            margin-right: 20px;
+            padding: 10px;
+            background-color: #8bec8f;
+            background-image: linear-gradient(135deg, #8bec8f 0%, #9599E2 100%);
+            border-radius: 20%;
+            border: 1px solid black;
+            color: black;
+            font-size: 20px;
+        }
+        .nav ul li a { /* This for secondary categories */
+            margin-top: 3px;
+            padding: 3px;
+            background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+            border-radius: 25%;
+            border: 1px solid black;
+            color: black;
+        }
+
+    </style>
 </head>
 <body>
-    <ul>
+    <ul class="nav">
         <li><a href="">Mujer</a>
             <ul>
                 <li><a href="">Camisetas</a></li>
-                <li><a href="">Pantalones</a></li>
+                <li><a href="">Pantalones</a>
+                    <ul>
+                        <li><a href="">Negros</a></li>
+                        <li><a href="">Mezclilla</a></li>
+                        <li><a href="">Azul</a></li>
+                    </ul>
+                </li>
                 <li><a href="">Shorts</a>
                     <ul>
                         <li><a href="">Largos</a></li>
@@ -21,7 +81,25 @@
                 </li>
             </ul>
         </li>
-        <li><a href="">Hombre</a></li>
+        <li><a href="">Hombre</a>
+            <ul>
+                <li><a href="">Camisetas</a></li>
+                <li><a href="">Pantalones</a>
+                    <ul>
+                        <li><a href="">Negros</a></li>
+                        <li><a href="">Mezclilla</a></li>
+                        <li><a href="">Azul</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Shorts</a>
+                    <ul>
+                        <li><a href="">Largos</a></li>
+                        <li><a href="">Cortos</a></li>
+                        <li><a href="">Transparentes</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
         <li><a href="">Niño</a></li>
     </ul>
 </body>

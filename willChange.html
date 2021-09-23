@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 100px;
+            height: 30px;
+            background: greenyellow;
+            border-radius: 20%;
+        }
+        .better {
+            will-change: transform;
+            transition: transform 500ms;
+        }
+        .better:hover {
+            transform: translateY(25px);
+        }
+        .worse {
+            will-change: margin-top;
+            transition: margin-top 500ms;
+        }
+        .worse:hover {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="better">Good Botton</button>
+        <button class="worse">Bad Botton</button>
+    </div>
+</body>
+</html>
